@@ -13,7 +13,7 @@ def word_collection(s, words):
 
     for s_word in s_words:
         for i, w in enumerate(words):
-            if w == s_word: # word is the word in the sentence
+            if w == s_word: # word is in the sentence
                 collection[i] = 1
 
     return np.array(collection)
@@ -43,7 +43,6 @@ def chat(model: tfl.DNN, words: list[str], labels: list[str]):
             
             print(f'IRIS: {random.choice(responses)}')
             
-
             if tag == 'goodbye':
                 break
         else:

@@ -1,8 +1,5 @@
 import os
-import numpy as np
 import tensorflow as tf
-import tflearn as tfl
-import random
 import glob
 
 from preprocessing import *
@@ -23,10 +20,10 @@ tf.compat.v1.reset_default_graph()
 model = generate_neural_network(len(training[0]), len(output[0]))
 
 if glob.glob('./data/model.tflearn*'):
-    print("Reading model.tflearn...")
+    print("Reading model.tflearn file...")
     model.load('./data/model.tflearn')
 else:
-    print("Training Model")
+    print("Training Model...")
     train(model, training, output)
     model.save('./data/model.tflearn')
 

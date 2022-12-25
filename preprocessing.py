@@ -13,6 +13,7 @@ class Data:
     keys: list[list[str]] = field(default_factory=list)
     values: list[list[str]] = field(default_factory=list)
 
+
 def parse_json() -> dict:
     f = open("intents.json")
     data = json.load(f)
@@ -49,11 +50,10 @@ def process_data():
 
 
 def one_hot_encoded(data: Data):
-    
     training = []
     output = []
     zeros = [0] * len(data.labels)
-
+    
     for i, doc in enumerate(data.keys):
         collection = []
         wrds = stem_words(doc)

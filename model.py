@@ -1,5 +1,5 @@
 import tflearn as tfl 
-import numpy as np
+
 
 def generate_neural_network(input_layer_size: int, output_layer_size: int) -> tfl.DNN:
 
