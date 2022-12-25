@@ -1,0 +1,32 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["hello", "hi", "hey", "whats up", "how are you", "good day","greetings"],
+         "responses": ["Hello!", "Hello human.", "Hello there!", "Hey!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["bye", "cya", "see you later", "goodbye", "im leaving", "gotta go", "have a nice one"],
+         "responses": ["Bye friend!", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "thanks",
+         "patterns": ["thanks", "thank you", "thx", "ty"],
+         "responses": ["You're welcome!", "No problem!", "Glad I could help!"],
+         "context_set": ""
+        },
+        {"tag": "joke",
+         "patterns": ["joke", "tell me a joke", "make me laugh", "do you know any good jokes?"],
+         "responses": ["Why couldn't the bicycle stand up by itself? Because it was two-tired.", 
+                       "Why was the math book sad? Because it had too many problems.", 
+                       "Why did the tomato turn red? Because it saw the salad dressing!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what's your name", "who are you", "tell me about yourself", "name"],
+         "responses": ["My name is IRIS, which stands for Intelligent and Responsive Interactive System", 
+                       "I am an AI trained to answer questions.", 
+                       "I am an artificial intelligence."],
+         "context_set": ""
+        }
+   ]
+}
