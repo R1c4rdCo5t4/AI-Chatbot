@@ -19,9 +19,18 @@ def word_collection(s, words):
     return np.array(collection)
 
 
+def send_random_response(data, tag):
+    for label in data['intents']:
+        if label['tag'] == tag:
+            response = random.choice(label['responses'])
+            print(f'IRIS: {response}')
+            return 
+            
+
 def chat(model: tfl.DNN, words: list[str], labels: list[str]):
     os.system('cls')
-    min_confidence = 0.82
+    data = parse_json()
+    min_confidence = 0.7
 
     while True:
         prompt = input("You: ").lower()
@@ -35,16 +44,12 @@ def chat(model: tfl.DNN, words: list[str], labels: list[str]):
         tag = labels[max_idx] # tag with the highest probability
 
         if highest > min_confidence:
-            data = parse_json()
-            for label in data['intents']:
-                if label['tag'] == tag:
-                    responses = label['responses']
-                    break
             
-            print(f'IRIS: {random.choice(responses)}')
-            
+            send_random_response(data, tag)
             if tag == 'goodbye':
                 break
+
         else:
-            print(f'IRIS: Sorry, I didn\'t understand.')
+            send_random_response(data, 'noanswer')
+
         print(f'Confidence: {highest}')

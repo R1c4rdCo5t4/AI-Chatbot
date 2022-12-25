@@ -1,4 +1,4 @@
-from setup import model, data
+from train import model, data
 from chat import *
 
 def main():
