@@ -15,18 +15,19 @@ class Data:
 
 
 def parse_json() -> dict:
-    f = open("intents.json")
-    data = json.load(f)
-    f.close()
+    with open("intents.json") as f:
+        data = json.load(f)
+    
     return data
 
 
-def stem_words(words: list[str]):
+def stem_words(words: list[str]) -> set[str]:
     stm = LancasterStemmer()
-    return { stm.stem(w.lower()) for w in words if w != '?'}
+    ignored_words = ["?", "!", ".", ":", ","]
+    return { stm.stem(w.lower()) for w in words if w not in ignored_words }
 
 
-def process_data():
+def process_data() -> Data:
     
     data = parse_json() 
     words = []
@@ -49,7 +50,7 @@ def process_data():
     return Data(words, labels, keys, values)
 
 
-def one_hot_encoded(data: Data):
+def one_hot_encoded(data: Data) -> tuple:
     training = []
     output = []
     zeros = [0] * len(data.labels)
@@ -80,10 +81,10 @@ def read_data():
     return Data(words, labels), training, output
 
 
-def save_data(data, training, output):
+def save_data(data: Data, training, output):
     filename = "data/data.pickle"
     if not os.path.exists(os.path.dirname(filename)):
         os.makedirs(os.path.dirname(filename))
 
-    with open(filename, "wb") as f:
+    with open(filename, 'wb') as f:
         pickle.dump((data.words, data.labels, training, output), f)

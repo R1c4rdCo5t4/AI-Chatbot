@@ -1,19 +1,17 @@
 import nltk
 import numpy as np
 import tflearn as tfl
-import os
 import random
-from preprocessing import stem_words, parse_json
+from processing import stem_words, parse_json
 
 
-def word_collection(s, words):
+def word_collection(prompt: str, words: list[str]):
     collection = [0] * len(words)
-    s_words = nltk.word_tokenize(s)
-    s_words = stem_words(s_words)
+    prompt_words = stem_words(nltk.word_tokenize(prompt))
 
-    for s_word in s_words:
+    for pw in prompt_words:
         for i, w in enumerate(words):
-            if w == s_word: # word is in the sentence
+            if pw == w: # word is in the sentence
                 collection[i] = 1
 
     return np.array(collection)
@@ -24,11 +22,10 @@ def send_random_response(data, tag):
         if label['tag'] == tag:
             response = random.choice(label['responses'])
             print(f'IRIS: {response}')
-            return 
+            break 
             
 
 def chat(model: tfl.DNN, words: list[str], labels: list[str]):
-    os.system('cls')
     data = parse_json()
     min_confidence = 0.7
 

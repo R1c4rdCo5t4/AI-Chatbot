@@ -19,7 +19,7 @@ def generate_neural_network(input_layer_size: int, output_layer_size: int) -> tf
     return model
 
 
-def train(model, training, output, n_epoch=1000):
+def train(model: tfl.DNN, training, output, n_epoch=1000) -> None:
     model.fit(training, output, n_epoch=n_epoch, batch_size=8, show_metric=True)
 
 

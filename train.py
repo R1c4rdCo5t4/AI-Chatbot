@@ -2,7 +2,7 @@ import os
 import tensorflow as tf
 import glob
 
-from preprocessing import *
+from processing import *
 from model import *
 
 
@@ -24,7 +24,7 @@ if glob.glob('./data/model.tflearn*'):
     model.load('./data/model.tflearn')
 else:
     print("Training Model...")
-    train(model, training, output, 10000)
+    train(model, training, output, 1000)
     model.save('./data/model.tflearn')
 
 
