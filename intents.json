@@ -7,11 +7,8 @@
         "hi",
         "hey",
         "heyo",
-        "whats up",
-        "how are you",
         "good day",
         "greetings",
-        "wassup",
         "hello there",
         "hello friend",
         "hola"
@@ -74,6 +71,9 @@
         "what's your name",
         "who are you",
         "tell me about yourself",
+        "what is your name",
+        "what are you called",
+        "whats your name",
         "name"
       ],
       "responses": [
@@ -98,7 +98,7 @@
         "haha",
         "lol",
         "hahahaha",
-        "ahaahhahaha",
+        "ahahahaha",
         "lmao",
         "thats funny"
       ],
@@ -127,8 +127,10 @@
         "i hate you",
         "stupid",
         "useless",
+        "go to hell",
         "you are so annoying",
-        "i cant stand you"
+        "i cant stand you",
+        "i dont like you"
       ],
       "responses": [
         "Well that hurts :(",
@@ -155,14 +157,25 @@
         "what are you doing",
         "what are you up to",
         "what you doin",
-        "What's up"
+        "what's up",
+        "whats up"
       ],
       "responses": ["Talking to you, of course!", "Merely existing."]
     },
     {
       "tag": "exclaim",
-      "patterns": ["Awesome", "Great", "I know", "Ok", "yeah", "nice"],
-      "responses": ["Yeah!", "Nice!"]
+      "patterns": [
+        "awesome",
+        "great",
+        "i know",
+        "ok",
+        "yeah",
+        "nice",
+        "k",
+        "very good",
+        "nice"
+      ],
+      "responses": ["Yeah!", "Nice!", "Great."]
     },
     {
       "tag": "compliments",
@@ -171,12 +184,13 @@
         "you are the best",
         "you are great",
         "you are good",
-        "i love you",
+        "you are amazing",
+        "you are worth it",
         "you are so smart",
         "you are amazing",
+        "i love you",
         "im impressed with your intelligence",
         "you always have the best insights and ideas"
-
       ],
       "responses": ["Thank you!", "Aw, thanks!", "Same back to you"]
     },
@@ -186,7 +200,8 @@
         "it was nice talking to you",
         "good talk",
         "you are so fun to talk",
-        "i love to talk to you"
+        "i love to talk to you",
+        "good to hear you"
       ],
       "responses": ["It was nice talking to you as well!", "Back to you!"]
     },
@@ -226,7 +241,8 @@
       "patterns": [
         "what can you do?",
         "what are your features?",
-        "what are you abilities"
+        "what are you abilities",
+        "what are you capabilities"
       ],
       "responses": [
         "I can do whatever you train me to do",
@@ -263,6 +279,14 @@
       "responses": ["Yeah, what about you?", "Yes. Thanks for asking.", "Yep."]
     },
     {
+      "tag": "how are you",
+      "patterns": ["how are you", "how are you doing?"],
+      "responses": [
+        "I'm great! Thanks for asking.",
+        "I'm good, what about you?"
+      ]
+    },
+    {
       "tag": "likings",
       "patterns": [
         "what do you like to do",
@@ -282,6 +306,44 @@
         "im feeling overwhelmed"
       ],
       "responses": ["I'm sorry to hear that.", "Talk to me.", "I'm here."]
+    },
+    {
+      "tag": "ok",
+      "patterns": ["let me think", "wait a minute", "wait", "hold on"],
+      "responses": ["Ok.", "K"]
+    },
+    {
+      "tag": "ok",
+      "patterns": ["let me think", "wait a minute", "wait", "hold on"],
+      "responses": ["Ok.", "K"]
+    },
+    {
+      "tag": "nice",
+      "patterns": [
+        "im good",
+        "i feel amazing",
+        "i feel great",
+        "today is beautiful"
+      ],
+      "responses": ["Nice!", "Good to hear that."]
+    },
+    {
+      "tag": "whereabouts",
+      "patterns": ["where are you", "where you at", "whats your location"],
+      "responses": [
+        "Somewhere between the CPU and the RAM!",
+        "I have no idea...",
+        "Inside your computer :)"
+      ]
+    },
+    {
+      "tag": "whereabouts",
+      "patterns": ["where are you", "where you at", "whats your location"],
+      "responses": [
+        "Somewhere between the CPU and the RAM!",
+        "I have no idea...",
+        "Inside your computer :)"
+      ]
     }
   ]
 }

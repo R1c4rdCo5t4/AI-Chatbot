@@ -6,9 +6,9 @@ def generate_neural_network(input_layer_size: int, output_layer_size: int) -> tf
     # input layer
     net = tfl.input_data(shape=[None, input_layer_size])
 
-    # hidden layers with 8 neurons
-    net = tfl.fully_connected(net, 8) 
-    net = tfl.fully_connected(net, 8)
+    # hidden layers with 10 neurons each
+    net = tfl.fully_connected(net, 10) 
+    net = tfl.fully_connected(net, 10)
 
     # output layer
     net = tfl.fully_connected(net, output_layer_size, activation='softmax') # softmax gives probabilities for each output

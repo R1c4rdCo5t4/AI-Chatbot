@@ -24,7 +24,7 @@ if glob.glob('./data/model.tflearn*'):
     model.load('./data/model.tflearn')
 else:
     print("Training Model...")
-    train(model, training, output, 10000)
+    train(model, training, output, 2000)
     model.save('./data/model.tflearn')
 
 
