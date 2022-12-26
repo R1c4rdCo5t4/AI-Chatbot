@@ -17,11 +17,12 @@ def word_collection(prompt: str, words: list[str]):
     return np.array(collection)
 
 
-def send_random_response(data, tag):
+def send_random_response(data:dict, tag:str, confidence:float):
     for label in data['intents']:
         if label['tag'] == tag:
             response = random.choice(label['responses'])
-            print(f'IRIS: {response}')
+            confidence = format(confidence * 100, '.2f')
+            print(f'IRIS: {response} (Confidence: {confidence} %)')
             break 
             
 
@@ -41,12 +42,10 @@ def chat(model: tfl.DNN, words: list[str], labels: list[str]):
         tag = labels[max_idx] # tag with the highest probability
 
         if highest > min_confidence:
-            
-            send_random_response(data, tag)
+            send_random_response(data, tag, highest)
             if tag == 'goodbye':
                 break
-
         else:
-            send_random_response(data, 'noanswer')
+            send_random_response(data, 'noanswer', highest)
 
-        print(f'Confidence: {highest}')
+    

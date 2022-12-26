@@ -126,7 +126,9 @@
         "no one likes you",
         "i hate you",
         "stupid",
-        "useless"
+        "useless",
+        "you are so annoying",
+        "i cant stand you"
       ],
       "responses": [
         "Well that hurts :(",
@@ -137,22 +139,16 @@
       ]
     },
     {
-        "tag": "apologies",
-        "patterns": [
-          "sorry",
-          "sorry about that",
-          "i apologize",
-          "my apologies",
-          "that wont happen again"
-        ],
-        "responses": [
-          "It's okay",
-          "Ok...",
-          "I forgive you",
-          "Sure",
-          "It's fine."
-        ]
-      },
+      "tag": "apologies",
+      "patterns": [
+        "sorry",
+        "sorry about that",
+        "i apologize",
+        "my apologies",
+        "that wont happen again"
+      ],
+      "responses": ["It's okay", "Ok...", "I forgive you", "Sure", "It's fine."]
+    },
     {
       "tag": "activity",
       "patterns": [
@@ -169,14 +165,18 @@
       "responses": ["Yeah!", "Nice!"]
     },
     {
-      "tag": "appreciate",
+      "tag": "compliments",
       "patterns": [
         "You are awesome",
         "you are the best",
         "you are great",
         "you are good",
         "i love you",
-        "you are so smart"
+        "you are so smart",
+        "you are amazing",
+        "im impressed with your intelligence",
+        "you always have the best insights and ideas"
+
       ],
       "responses": ["Thank you!", "Aw, thanks!", "Same back to you"]
     },
@@ -215,12 +215,11 @@
     },
     {
       "tag": "lang",
-      "patterns": ["what language were you written in?", "in what language were you built"],
-      "responses": [
-        "Python.",
-        "I am written in Python.",
-        "print(\"Python!\")"
-      ]
+      "patterns": [
+        "what language were you written in?",
+        "in what language were you built"
+      ],
+      "responses": ["Python.", "I am written in Python.", "print(\"Python!\")"]
     },
     {
       "tag": "abilities",
@@ -235,14 +234,54 @@
         "Not much."
       ]
     },
-    {"tag": "alive",
-     "patterns": [ "are you alive", "are you there", "you there?"],
-     "responses": ["I'm here!", "Of course I am.", "As long as you're here with me."]
+    {
+      "tag": "alive",
+      "patterns": ["are you alive", "are you there", "you there?"],
+      "responses": [
+        "I'm here!",
+        "Of course I am.",
+        "As long as you're here with me."
+      ]
     },
-    {"tag": "about me",
-     "patterns": ["do you know me?", "who am I", "tell me about myself", "identify me"],
-     "responses": ["Yes, you are a human","You are a dumb person asking a machine about yourself", "Do I?"],
-     "context_set": ""
+    {
+      "tag": "about me",
+      "patterns": [
+        "do you know me?",
+        "who am I",
+        "tell me about myself",
+        "identify me"
+      ],
+      "responses": [
+        "You are a human",
+        "You are a dumb person asking a machine about yourself",
+        "I don't know who you are."
+      ]
+    },
+    {
+      "tag": "you ok",
+      "patterns": ["are you ok?", "are you okay", "you ok?"],
+      "responses": ["Yeah, what about you?", "Yes. Thanks for asking.", "Yep."]
+    },
+    {
+      "tag": "likings",
+      "patterns": [
+        "what do you like to do",
+        "you are your hobbies",
+        "what do you want to do",
+        "what do you like",
+        "what do you like to do in your free time?",
+        "do you have any hobbies or interests?"
+      ],
+      "responses": ["I like talking to you.", "Talking with someone"]
+    },
+    {
+      "tag": "encouragement",
+      "patterns": [
+        "im feeling down and sad",
+        "im sad",
+        "im feeling overwhelmed"
+      ],
+      "responses": ["I'm sorry to hear that.", "Talk to me.", "I'm here."]
     }
   ]
 }
