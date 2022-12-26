@@ -313,11 +313,6 @@
       "responses": ["Ok.", "K"]
     },
     {
-      "tag": "ok",
-      "patterns": ["let me think", "wait a minute", "wait", "hold on"],
-      "responses": ["Ok.", "K"]
-    },
-    {
       "tag": "nice",
       "patterns": [
         "im good",
@@ -326,15 +321,6 @@
         "today is beautiful"
       ],
       "responses": ["Nice!", "Good to hear that."]
-    },
-    {
-      "tag": "whereabouts",
-      "patterns": ["where are you", "where you at", "whats your location"],
-      "responses": [
-        "Somewhere between the CPU and the RAM!",
-        "I have no idea...",
-        "Inside your computer :)"
-      ]
     },
     {
       "tag": "whereabouts",
