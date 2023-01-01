@@ -11,7 +11,11 @@
         "greetings",
         "hello there",
         "hello friend",
-        "hola"
+        "hola",
+        "good morning",
+        "good afternoon",
+        "good everning",
+        "gm"
       ],
       "responses": [
         "Hello!",
@@ -32,7 +36,8 @@
         "goodbye",
         "im leaving",
         "gotta go",
-        "have a nice one"
+        "have a nice one",
+        "good night"
       ],
       "responses": ["Bye friend!", "Talk to you later", "Goodbye!"]
     },
@@ -183,7 +188,9 @@
         "You are awesome",
         "you are the best",
         "you are great",
+        "youre great",
         "you are good",
+        "you amazing",
         "you are amazing",
         "you are worth it",
         "you are so smart",
@@ -280,7 +287,7 @@
     },
     {
       "tag": "how are you",
-      "patterns": ["how are you", "how are you doing?"],
+      "patterns": ["how are you", "how are you doing?", "how are you feeling", "how r u", "how are u"],
       "responses": [
         "I'm great! Thanks for asking.",
         "I'm good, what about you?"
@@ -301,15 +308,21 @@
     {
       "tag": "encouragement",
       "patterns": [
-        "im feeling down and sad",
+        "im feeling down",
         "im sad",
-        "im feeling overwhelmed"
+        "im feeling overwhelmed",
+        "im feeling sad",
+        "i feel depressed",
+        "i feel miserable",
+        "im unhappy",
+        "im not okay",
+        "i need help"
       ],
       "responses": ["I'm sorry to hear that.", "Talk to me.", "I'm here."]
     },
     {
       "tag": "ok",
-      "patterns": ["let me think", "wait a minute", "wait", "hold on"],
+      "patterns": ["let me think", "wait a minute", "wait", "hold on", "just a second", "just a sec", "one minute"],
       "responses": ["Ok.", "K"]
     },
     {
@@ -318,7 +331,11 @@
         "im good",
         "i feel amazing",
         "i feel great",
-        "today is beautiful"
+        "today is beautiful",
+        "im great",
+        "today was a good day",
+        "im happy",
+        "i feel happiness"
       ],
       "responses": ["Nice!", "Good to hear that."]
     },
